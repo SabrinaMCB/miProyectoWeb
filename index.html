@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto</title>
+
+  <!--link a bootstrap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!--link de bootstrap iconografía-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!--vinculación de icomoon-->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--mi archivo css-->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md fixed-top bg-secondary" data-bs-theme="dark">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">
+        <img src="imagenes/logo_empresa - copia.svg" alt="Bootstrap" width="30"> DI
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#desplegable" a>
+
+        <span class="icon-library"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse" id="desplegable">
+        <ul class="navbar-nav d-flex w-100">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Inicio</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Servicios</a>
+          </li>
+
+          <li class="nav-item dropdown dropstart ms-md-auto">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+              Desplegar
+            </a>
+            <ul class="dropdown-menu ">
+              <li> <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#miModal">Contacto</button></li>
+
+
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> <!--cierre de la barra de navegación-->
+
+
+
+  <div class="modal fade " id="miModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h1 class="modal-title h6" id="miModal">Formulario de contacto</h1>
+          <button type="button" class="bi bi-x-circle-fill" data-bs-dismiss="modal"></button>
+        </div>
+
+
+
+        <div class="modal-body">
+
+
+          <form action="php/codigo.php" method="post" class="needs-validation" novalidate>
+
+            
+
+
+
+            <div class="row justify-content-center">
+
+              <div class="col-md-5">
+                
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="nombre" placeholder="Juan Perez" name="nombre">
+                  <label for="nombre">Nombre</label>
+                </div>
+                <div class="valid-feedback"> Muy bien el campo</div> <!--validación-->
+                <div class="invalid-feedback">Está mal el campo </div> <!--validación-->
+              </div> <!--primera columna del formulario-->
+
+              <div class="col-md-5">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" required class="form-control" name="email" id="email">
+                <div class="valid-feedback">Está bien el campo</div>
+                <div class="invalid-feedback">Está mal el campo</div>
+              </div> <!--segunda columna del formulario-->
+            </div>
+<div class="row justify-content-center">
+            <div class="col-10">
+            <label for="comentarios"  pattern="[a-zA-Z0-9]{5,30}" class="form-label">Comentarios</label>
+
+            <textarea name="comentarios" required class="form-control" id="comentarios"></textarea>
+            <div class="valid-feedback">Está bien el campo</div>
+            <div class="invalid-feedback">Está mal el campo</div>
+
+          </div>
+
+        </div>
+
+
+<div class="row justify-content-end">
+  <div class="col-1">
+
+            <button class="btn btn-outline-success mt-2">Enviar</button>
+          </div>
+
+          </div>
+
+
+
+          </form>
+
+
+
+
+
+        </div>
+        <div class="modal-footer">
+
+          <button class="btn btn-warning" data-bs-dismiss="modal">Cerrar</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <header class="mb-3 container-fluid d-flex flex-column align-items-start justify-content-center">
+    <h1 class="display-5">Diseño de Interiores</h1>
+
+    <p class="h5 fw-normal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, odio? Officia ratione hic
+      commodi minus, optio nisi laborum laboriosam facere doloribus nihil minima animi maiores debitis sed quidem autem
+      nemo.</p>
+
+    <a href="mailto:info@mimail.com" class="btn btn-dark">Contacto</a>
+
+  </header>
+
+  <main class="container-md">
+    <div class="row justify-content-center">
+      <section class="col-md-9">
+
+        <div id="miSlider" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#miSlider" data-bs-slide-to="0" class="active"></button>
+
+            <button type="button" data-bs-target="#miSlider" data-bs-slide-to="1"></button>
+
+          </div> <!--cierra indicadores-->
+          <div class="carousel-inner rounded-start-pill border border-dark">
+            <div class="carousel-item active">
+              <img src="imagenes/foto-0.jpg" class="d-block w-100" alt="imagen 1">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Diseño de Interiores</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, obcaecati consequuntur. Hic,
+                  perferendis similique suscipit modi corrupti, dolor dignissimos cumque neque dolore nulla cum quaerat,
+                  esse veniam consectetur mollitia soluta.</p>
+              </div>
+            </div><!--primera imagen-->
+            <div class="carousel-item">
+              <img src="imagenes/foto-1.jpg" class="d-block w-100" alt="imagen 2">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Diseño Interiores 2</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum soluta hic odit quas optio repellendus
+                  numquam! Distinctio voluptatibus aperiam assumenda ad eligendi error quo, harum quibusdam officiis sed
+                  dolor excepturi.</p>
+              </div>
+            </div> <!--cierra segunda imagen-->
+
+          </div> <!--cierra carousel inner-->
+          <button class="carousel-control-prev" type="button" data-bs-target="#miSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+          </button> <!--flecha de la izquierda-->
+          <button class="carousel-control-next" type="button" data-bs-target="#miSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+          </button> <!--flecha de la derecha-->
+        </div> <!--cierra carousel-->
+
+
+
+
+      </section>
+    </div> <!--cierra fila de columna 9 -->
+
+    <div class="row mt-3 justify-content-center">
+
+      <section class="col-md-4">
+
+        <div class="accordion accordion-flush" id="miAcordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#contenidoUno">
+                Experiencia Laboral
+              </button>
+            </h2>
+            <div id="contenidoUno" class="accordion-collapse collapse" data-bs-parent="#miAcordion">
+              <div class="accordion-body">
+
+                <table class="table table-dark border-dark">
+
+                  <tr>
+                    <th>Rol</th>
+                    <th>Empresa</th>
+                    <th>Año</th>
+                    <th>Link</th>
+
+                  </tr>
+
+                  <tr>
+                    <td>Diseñador Jr</td>
+                    <td colspan="2">Empresa 1 , 2020 </td>
+
+                    <td><a class="link-dark" href="#">Link</a></td>
+
+                  </tr>
+
+                  <tr>
+                    <td>Diseñador Sr</td>
+                    <td colspan="2">Empresa 2 , 2022 </td>
+
+                    <td><a class="link-dark" href="#">Link</a></td>
+
+                  </tr>
+
+
+
+
+                </table> <!--cierra la tabla-->
+
+
+
+
+
+
+
+
+
+
+
+              </div> <!--cierra el body del accordion-->
+            </div> <!--cierra parte colapsable-->
+          </div> <!--cierra el primer item-->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#contenidoDos">
+                Programas que manejo
+
+
+
+              </button>
+
+            </h2>
+            <div id="contenidoDos" class="accordion-collapse collapse" data-bs-parent="#miAcordion">
+              <div class="accordion-body">
+
+                <ul class="list-group">
+
+                  <li class="list-group-item"> Illustrator</li>
+                  <li class="list-group-item"> Photoshop</li>
+                  <li class="list-group-item">Figma</li>
+
+
+                </ul>
+
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+
+        </div> <!--cierra accordion-->
+
+
+
+
+      </section> <!--cierra col 4-->
+      <section class="col-md-5">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Mayor información</h5>
+            <p class="card-text">
+              Para saber más sobre mí
+
+
+            </p>
+            <a href="#" class="btn btn-dark">LinkedIn</a>
+          </div>
+        </div>
+
+
+
+      </section>
+
+
+    </div> <!--cierra segunda fila del main-->
+
+
+
+
+
+
+
+
+  </main> <!--cierra el main -->
+
+
+
+
+
+  <!--link de js-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+<!--link de código-->
+
+<script src="js/codigo.js"></script>
+    
+
+
+
+</body>
+
+</html>
